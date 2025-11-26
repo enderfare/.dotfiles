@@ -34,6 +34,7 @@
       openjdk # jdk for java dev
       mongodb-compass
       rpi-imager
+      gitbutler
 
       # Version Control
       lazygit # Simple terminal UI for git commands
@@ -55,7 +56,7 @@
       lazydocker # Simple terminal UI for Docker
       protontricks # Winetricks wrapper for Proton-based games  
       btop # process viewer
-
+	dysk
       # Terminal Utilities
       fastfetch # System information tool (like neofetch but faster)
       kitty # GPU-accelerated terminal emulator
@@ -104,6 +105,7 @@
 
       # Video editors
       davinci-resolve
+
     ];
   };
   # Fonts
