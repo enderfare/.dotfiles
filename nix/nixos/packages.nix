@@ -35,6 +35,7 @@
       mongodb-compass
       rpi-imager
       gitbutler
+      winboat
 
       # Version Control
       lazygit # Simple terminal UI for git commands
