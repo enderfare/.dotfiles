@@ -1,8 +1,9 @@
---target=~/.config
---ignore=.stowrc
+--target=~/
+--ignore
 --ignore=DS_Store
 --ignore=atuin/*
---ignore=.git/*
+--ignore=./.git/*
 --ignore=setup.*
 --ignore=README.md
 --ignore=LICENSE
+-vvv
