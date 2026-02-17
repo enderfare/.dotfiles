@@ -5,6 +5,6 @@
     "hardwareVideoAcceleration": true,
     "customTitleBar": true,
     "enableMenu": false,
-    "splashColor": "rgb(219, 220, 223)",
+    "splashColor": "rgb(220, 220, 223)",
     "splashTheming": false
 }

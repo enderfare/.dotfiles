@@ -35,7 +35,6 @@
       mongodb-compass
       rpi-imager
       gitbutler
-      winboat
 
       # Version Control
       lazygit # Simple terminal UI for git commands
@@ -57,7 +56,8 @@
       lazydocker # Simple terminal UI for Docker
       protontricks # Winetricks wrapper for Proton-based games  
       btop # process viewer
-	dysk
+      dysk
+      
       # Terminal Utilities
       fastfetch # System information tool (like neofetch but faster)
       kitty # GPU-accelerated terminal emulator
@@ -95,7 +95,6 @@
       obsidian # Knowledge base that works on local Markdown files
 
       # Download Utilities
-      persepolis # Download manager with clean UI and support for multiple protocols
       qbittorrent      
       yt-dlp # YouTube video downloader
       amule # Emule base app
