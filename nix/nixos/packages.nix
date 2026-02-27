@@ -34,7 +34,6 @@
       openjdk # jdk for java dev
       mongodb-compass
       rpi-imager
-      gitbutler
 
       # Version Control
       lazygit # Simple terminal UI for git commands
@@ -82,6 +81,7 @@
       wine # Compatibility layer for running Windows applications
       wine64 # 64-bit Wine build
       winetricks # Helper script to install DLLs and setup prefixes
+      winboat
 
       # Web Browsers
       vivaldi # Web browser with advanced customization features
