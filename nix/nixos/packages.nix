@@ -35,6 +35,7 @@
       mongodb-compass
       rpi-imager
       gitbutler
+      dpkg	
 
       # Version Control
       lazygit # Simple terminal UI for git commands
@@ -56,8 +57,16 @@
       lazydocker # Simple terminal UI for Docker
       protontricks # Winetricks wrapper for Proton-based games  
       btop # process viewer
+<<<<<<< ours
+      dysk 
+      winboat      
+      
+||||||| ancestor
+	dysk
+=======
       dysk
       
+>>>>>>> theirs
       # Terminal Utilities
       fastfetch # System information tool (like neofetch but faster)
       kitty # GPU-accelerated terminal emulator
@@ -93,6 +102,7 @@
  
       # Note Taking
       obsidian # Knowledge base that works on local Markdown files
+#      chronicler # Markdown editro for rpg systems
 
       # Download Utilities
       qbittorrent      
@@ -114,7 +124,7 @@
   fonts.packages = with pkgs; [
     jetbrains-mono
 
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     noto-fonts-cjk-sans
     noto-fonts
 

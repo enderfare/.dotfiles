@@ -11,7 +11,7 @@
     ./shell.nix
     ./sound.nix
     ./users.nix
-    ./virtmanager.nix
+    #./virtmanager.nix
     ./xserver.nix
     ./firewall.nix
   ];
