@@ -1,4 +1,4 @@
-# 🐧 BetaPoisoner's Dotfiles
+# 🐧 Ender's Dotfiles
 
 ![NixOS](https://img.shields.io/badge/NixOS-25.05-blue?logo=nixos)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
