@@ -1,0 +1,117 @@
+###############################################################################
+# GNU Nano 9.0 - Purple & Gold Theme
+###############################################################################
+
+#######################################
+# Editing
+#######################################
+
+set autoindent
+set atblanks
+set breaklonglines
+set tabstospaces
+set tabsize 4
+set trimblanks
+set smarthome
+set wordbounds
+set zap
+
+#######################################
+# Interface
+#######################################
+
+set linenumbers
+set constantshow
+set indicator
+set minibar
+set stateflags
+set mouse
+
+#######################################
+# Navigation
+#######################################
+
+set jumpyscrolling
+
+#######################################
+# History & Files
+#######################################
+
+set historylog
+set positionlog
+set backup
+set locking
+set multibuffer
+set unix
+
+#######################################
+# Search
+#######################################
+
+set regexp
+
+#######################################
+# UI Tweaks
+#######################################
+
+set quickblank
+set emptyline
+
+#######################################
+# Readable Purple & Gold Theme
+#######################################
+
+# Title bar
+set titlecolor black,magenta
+
+# Status/prompt bars
+set statuscolor black,brightyellow
+set promptcolor black,brightyellow
+
+# Shortcut labels (^G Help, ^O Write Out, etc.)
+set keycolor brightmagenta
+
+# Function descriptions
+set functioncolor brightwhite
+
+# Line numbers
+set numbercolor brightmagenta
+
+# Selected text
+set selectedcolor black,brightyellow
+
+# Search matches
+set spotlightcolor black,brightyellow
+
+# Errors
+set errorcolor brightwhite,red
+
+# Guide stripe (disabled)
+# set stripecolor brightmagenta
+
+#######################################
+# Optional
+#######################################
+
+# Uncomment if you want automatic save on exit
+# set saveonexit
+
+# Uncomment for modern shortcuts:
+# Ctrl+C Copy, Ctrl+V Paste, Ctrl+Z Undo, etc.
+# set modernbindings
+
+#######################################
+# Syntax Highlighting
+#######################################
+
+# Uncomment if these files exist:
+#
+# include "/usr/share/nano/*.nanorc"
+# include "/usr/share/nano/extra/*.nanorc"
+#
+# Find available syntax files with:
+# find /usr/share -name "*.nanorc" 2>/dev/null
+
+###############################################################################
+# End of file
+###############################################################################

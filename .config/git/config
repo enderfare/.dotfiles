@@ -1,0 +1,187 @@
+# =============================================
+# USER CONFIGURATION
+# =============================================
+[user]
+	name = BetaPoisoner
+	email = sdhds954@gmail.com
+
+[github]
+	user = betapoisoner
+
+# =============================================
+# CORE EDITOR & PLATFORM SETTINGS
+# =============================================
+[core]
+	editor = code --wait
+	pager = cat
+	eol = lf
+	autocrlf = false
+
+[init]
+	defaultBranch = main
+
+[web]
+	browser = vivaldi
+
+# =============================================
+# COLOR & UI SETTINGS
+# =============================================
+[color]
+	ui = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red
+	new = green
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[column]
+	ui = auto
+
+# =============================================
+# BRANCH & STATUS DISPLAY
+# =============================================
+[branch]
+	sort = -committerdate
+
+[status]
+	short = true
+
+# =============================================
+# COMMAND BEHAVIOR CONFIGURATION
+# =============================================
+[pull]
+	rebase = true
+
+[fetch]
+	prune = true
+
+[help]
+	autocorrect = 1
+
+[grep]
+	lineNumber = true
+
+[blame]
+	coloring = highlightRecent
+
+[rerere]
+	enabled = true
+
+# =============================================
+# FSCK SETTINGS (legacy repo compatibility)
+# =============================================
+[fsck]
+	zeroPaddedFilemode = ignore
+
+[fetch "fsck"]
+	zeroPaddedFilemode = ignore
+
+[receive "fsck"]
+	zeroPaddedFilemode = ignore
+
+# =============================================
+# ALIASES - GROUPED BY FUNCTION
+# =============================================
+[alias]
+	# === CONFIG MANAGEMENT ===
+	# List all configured aliases
+	alias = !git config -l | grep alias
+
+	# Edit global git configuration in default editor
+	conf = config --global -e
+
+	# === STATUS & INFORMATION ===
+	# Standard status command
+	st = status
+
+	# Short, branch-focused status
+	ts = status -sb
+
+	# Show current branch name
+	here = !git rev-parse --abbrev-ref HEAD
+
+	# Show last commit details
+	last = log -1 HEAD
+
+	# Show contributor statistics
+	contrib = shortlog --summary --numbered
+
+	# === STAGING CHANGES ===
+	# Add all changes in current directory
+	adda = add .
+
+	# Unstage all changes (reset HEAD)
+	unstage = reset -q HEAD --
+
+	# Short version of unstage
+	uns = unstage
+
+	# === COMMITTING ===
+	# Commit staged changes
+	cm = commit
+
+	# Commit all changes (including unstaged)
+	cma = commit -a
+
+	# Amend the last commit (edit message and content)
+	amend = commit --amend
+
+	# Amend the last commit without editing the message
+	append = commit --amend --reuse-message=HEAD
+
+	# === BRANCHING ===
+	# Switch to another branch
+	ck = switch
+
+	# Create and switch to new branch
+	ckb = switch -c
+
+	# Checkout remote tracking branch
+	ckt = checkout -t
+
+	# Clean up branches that have been deleted on remote
+	cleanup = "!git fetch --all -p && git branch -vv | grep \": gone]\" | awk '{ print $1 }' | xargs -n 1 git branch -D"
+
+	# Completely delete a branch locally and remotely
+	nuke = "!f() { git branch -D $1 && git push origin :$1; }; f"
+
+	# === REMOTE & SYNC ===
+	# Fetch from all remotes and prune deleted branches
+	ft = fetch --all --prune
+
+	# Pull latest changes with rebase
+	down = !git pull --rebase origin $(git here)
+
+	# Push current branch and set upstream
+	up = !git push origin -u $(git here)
+
+	# Force push current branch and set upstream
+	upf = !git push -f origin -u $(git here)
+
+	# === HISTORY VIEWING ===
+	# Pretty graph log with colors and relative dates
+	gl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+	# === DIFF & COMPARE ===
+	# Word-level diff (easier to read)
+	df = diff --word-diff
+
+	# === REWRITE HISTORY ===
+	# Interactive rebase
+	rbi = rebase -i
+
+	# Cherry-pick commits
+	chp = cherry-pick
+[maintenance]
+	repo = /home/beta/.dotfiles
