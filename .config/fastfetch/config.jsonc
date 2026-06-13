@@ -95,8 +95,18 @@
     },
     {
       "type": "disk",
-      "key": "{#separator}│  {#keys}󰋊 Disk (/)",
+      "key": "{#separator}│  {#keys}󰋊 Disk Main",
       "folders": "/"
+    },
+    {
+      "type": "disk",
+      "key": "{#separator}│  {#keys}󰋊 Disk Projects",
+      "folders": "/programing"
+    },
+    {
+      "type": "disk",
+      "key": "{#separator}│  {#keys}󰋊 Disk Games",
+      "folders": "/home/beta/games"
     },
     {
       "type": "custom",

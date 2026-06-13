@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
 
   nixpkgs = {
@@ -10,6 +10,10 @@
       ];
     };
     overlays = [
+      # Millennium overlay
+      inputs.millennium.overlays.default
+
+      # Your existing overlay
       (final: prev: {
         lombokEclipse =
           with prev.eclipses;
@@ -22,15 +26,21 @@
           };
       })
     ];
+
   };
 
-  # ===================== ENABLE JAVA GLOBALLY =====================
-  programs.java = {
-    enable = true;
-    package = pkgs.openjdk25; # OpenJDK 25
+  programs = {
+    # ===================== ENABLE JAVA GLOBALLY =====================
+    java = {
+      enable = true;
+      package = pkgs.openjdk25; # OpenJDK 25
+    };
+    # ===================== ENABLE MILLENIUM ON STEAM ================
+    steam = {
+      enable = true;
+      package = pkgs.millennium-steam;
+    };
   };
-  # =================================================================
-
   environment = {
     systemPackages = with pkgs; [
       # Development Tools
@@ -63,6 +73,7 @@
       # Text Editors & IDEs
       neovim
       vscode
+      zed
       #eclipses.eclipse-java
       #lombok
       lombokEclipse
@@ -102,6 +113,7 @@
       cava
       ffmpeg
       kew
+      rmpc
 
       # Gaming
       wine
@@ -109,6 +121,7 @@
       winetricks
       winboat
       modrinth-app
+      steam
 
       # Web Browsers
       vivaldi
@@ -136,6 +149,9 @@
 
       # 3D Editor
       blockbench
+
+      # Pokemon
+      pokemon-colorscripts
     ];
   };
 

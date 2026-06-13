@@ -39,15 +39,29 @@
   };
 
   fileSystems."/programing" = {
-     device = "/dev/disk/by-uuid/0712bed5-5c2b-4dde-9745-d7f273ea4a9b";
-     fsType = "ext4";
-  }; 
-
-  fileSystems."/data" = {
-      device = "/dev/disk/by-uuid/c6da343e-5eac-4ced-9e6d-70d1d1ac5887";
-      fsType = "ext4";
+    device = "/dev/disk/by-uuid/0712bed5-5c2b-4dde-9745-d7f273ea4a9b";
+    fsType = "ext4";
   };
-   
+
+  fileSystems."/home/beta/games" = {
+    device = "/dev/disk/by-uuid/c6da343e-5eac-4ced-9e6d-70d1d1ac5887";
+    fsType = "ext4";
+  };
+
+  fileSystems."/home/beta/Downloads" = {
+    device = "/dev/disk/by-uuid/bb000583-c4f4-48a2-ac6a-e3919fa3c103";
+    fsType = "ext4";
+  };
+
+  fileSystems."/home/beta/Music" = {
+    device = "/dev/disk/by-uuid/3bc8f9fe-9461-40fe-8c6b-05f20d4ac913";
+    fsType = "ext4";
+  };
+
+  fileSystems."/home/beta/Videos" = {
+    device = "/dev/disk/by-uuid/b199eac0-df8c-4f84-9f98-71cd498677cf";
+    fsType = "ext4";
+  };
   swapDevices = [ { device = "/dev/disk/by-uuid/39010a2d-9d3b-4190-a708-700e7fcaaee9"; } ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
