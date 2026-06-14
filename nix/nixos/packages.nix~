@@ -73,7 +73,7 @@
       # Text Editors & IDEs
       neovim
       vscode
-      zed
+      zed-edtior
       #eclipses.eclipse-java
       #lombok
       lombokEclipse
@@ -113,7 +113,6 @@
       cava
       ffmpeg
       kew
-      mpd
       rmpc
 
       # Gaming

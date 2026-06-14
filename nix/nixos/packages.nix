@@ -73,7 +73,7 @@
       # Text Editors & IDEs
       neovim
       vscode
-      zed
+      zed-editor
       #eclipses.eclipse-java
       #lombok
       lombokEclipse

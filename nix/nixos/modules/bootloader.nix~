@@ -17,7 +17,14 @@
         device = "nodev";
         efiSupport = true;
         extraEntries = ''
-          
+          menuentry "Windows" --class windows {
+            insmod part_gpt
+            insmod fat
+            insmod search_fs_uuid
+            insmod chain
+            search --fs-uuid --set=root F7A1-577D
+            chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+          }
           menuentry "Reboot" --class kali {
           reboot
           }

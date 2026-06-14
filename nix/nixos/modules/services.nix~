@@ -2,15 +2,24 @@
   services = {
     mpd = {
       enable = true;
-      #musicDirectory = "/home/beta/Music";
-      extraConfig = ''
-        # must specify one or more outputs in order to play audio!
-        # (e.g. ALSA, PulseAudio, PipeWire), see next sections
-      '';
-
-       # Optional:
-       #network.listenAddress = "any"; # if you want to allow non-localhost connections
-       #network.startWhenNeeded = true; # systemd feature: only start MPD service upon connection to its socket
+      user = "beta";
+      settings = {
+        bind_to_address = "/home/beta/.mdp/socket";
+        music_directory = "/home/beta/Music";
+        playlist_directory = "/home/beta/.mpd/playlists";
+        db_file = "/home/beta/.mdp/db";
+        audio_output = [ 
+          {
+            type = "pipewire";
+            name = "PipeWire Output";
+          }
+          #{
+          #  type = "alsa";
+          #  name = "ALSA Null";
+          #  mixer_type = "null";
+          #}
+        ];
+      };
     };
   };
 }

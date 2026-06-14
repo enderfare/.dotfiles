@@ -23,9 +23,7 @@
     groups = {
       docker = {
         name = "docker";
-      };
-      mpd = {
-        name = "mpd";
+        gid = 1001;
       };
     };
   };
