@@ -1,0 +1,32 @@
+{ config, pkgs, ... }:
+{
+  programs.obs-studio = {
+    enable = true;
+
+    # optional Nvidia hardware acceleration
+    package = (
+      pkgs.obs-studio.override {
+        cudaSupport = true;
+      }
+    );
+
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-backgroundremoval
+      obs-pipewire-audio-capture
+      obs-move-transition
+      obs-gstreamer
+      obs-vkcapture
+      obs-tuna
+      obs-source-clone
+      obs-shaderfilter
+      obs-plugin-countdown
+      obs-pipewire-audio-capture  
+      obs-advanced-masks
+      obs-dir-watch-media
+      #obs-input-overlay
+      obs-markdown
+      waveform
+    ];
+  };
+}

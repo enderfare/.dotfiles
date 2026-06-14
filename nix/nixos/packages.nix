@@ -113,7 +113,8 @@
       cava
       ffmpeg
       kew
-      rmpc
+      #rmpc
+      #obs-studio
 
       # Gaming
       wine
@@ -134,7 +135,8 @@
       # Note Taking
       obsidian
       logseq
-
+      chronicler
+      
       # Download Utilities
       qbittorrent
       yt-dlp
@@ -150,6 +152,9 @@
       # 3D Editor
       blockbench
 
+      # Mic Config
+      bluyeti-linux
+       
       # Pokemon
       pokemon-colorscripts
     ];
@@ -166,4 +171,6 @@
     nerd-fonts.droid-sans-mono
     nerd-fonts.jetbrains-mono
   ];
+
+  udev.packages = with pkgs; [ blueyeti-linux ];
 }

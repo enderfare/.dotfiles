@@ -9,31 +9,34 @@
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      nixpkgs-stable,
-      ...
-    }@inputs:
+    { self, nixpkgs, nixpkgs-stable, ... }@inputs:
 
     let
       system = "x86_64-linux";
     in
     {
+      overlays.default = final: prev: {
+        chronicler = final.callPackage ./nixos/pkgs/chronicler.nix { };
+        blueyeti-linux = final.callPackage ./nixos/pkgs/blueyeti-linux.nix { };
+      };
 
-      # nixos - system hostname
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {
-          pkgs-stable = import nixpkgs {
+          pkgs-stable = import nixpkgs-stable {
             inherit system;
             config.allowUnfree = true;
           };
+
           inherit inputs system;
         };
+
         modules = [
+          ({ ... }: {
+            nixpkgs.overlays = [ self.overlays.default ];
+          })
+
           inputs.minegrub-world-sel-theme.nixosModules.default
           ./nixos/configuration.nix
-
         ];
       };
     };

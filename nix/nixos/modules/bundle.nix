@@ -15,5 +15,6 @@
     ./xserver.nix
     ./firewall.nix
     ./services.nix
+    ./obs.nix
   ];
 }

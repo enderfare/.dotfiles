@@ -14,5 +14,6 @@
     #./virtmanager.nix
     ./xserver.nix
     ./firewall.nix
+    ./services.nix
   ];
 }
